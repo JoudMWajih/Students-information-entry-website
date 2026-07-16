@@ -30,3 +30,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 $conn->close();
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students Information Entry Website</title>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Students Information Entry Website</h1>
+
+  <form method="POST" action="in.php" style="text-align:center;">
+    <input type="text" name="name" placeholder="Enter student name" required>
+    <input type="number" name="age" placeholder="Enter age" required>
+    <button type="submit" name="submit">Submit</button>
+  </form>
+
+</body>
+</html>
+
+<?php
+$conn->close();
+?>
+
