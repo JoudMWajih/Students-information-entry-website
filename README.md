@@ -76,18 +76,6 @@ CREATE TABLE students (
 );
 ```
 
----
-## Project Files
-
-student-information-database/
-│
-├── index.php
-├── in.php
-├── db.php
-├── toggle.php
-├── style.css
-├── script.js
-└── README.md
 
 ---
 ## File Description
