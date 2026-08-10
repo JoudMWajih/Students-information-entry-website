@@ -60,3 +60,18 @@ students
 | name | VARCHAR(100) | Student name |
 | age | INT | Student age |
 | status | TINYINT(1) | Status value, either 0 or 1 |
+
+---
+
+## SQL Code
+
+The following SQL code was used to create the `students` table:
+
+```sql
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    status TINYINT(1) DEFAULT 0
+);
+```
