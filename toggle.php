@@ -1,18 +1,25 @@
 <?php
-$servername = "sql111.infinityfree.com";
-$username = "if0_42401046";
-$password = "nYqOkaDVxPRoZ6p";
-$dbname = "if0_42401046_XXX";
+include 'db.php';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!isset($_POST['id'])) {
+    echo "No ID";
+    exit();
 }
 
-$id = $_POST['id'];
+$id = intval($_POST['id']);
 
 $result = $conn->query("SELECT status FROM students WHERE id = $id");
+
+if (!$result) {
+    echo "SQL Error";
+    exit();
+}
+
+if ($result->num_rows == 0) {
+    echo "Not Found";
+    exit();
+}
+
 $row = $result->fetch_assoc();
 
 if ($row['status'] == 0) {
@@ -21,9 +28,13 @@ if ($row['status'] == 0) {
     $newStatus = 0;
 }
 
-$conn->query("UPDATE students SET status = $newStatus WHERE id = $id");
+$update = $conn->query("UPDATE students SET status = $newStatus WHERE id = $id");
 
-echo $newStatus;
+if ($update) {
+    echo $newStatus;
+} else {
+    echo "Update Error";
+}
 
 $conn->close();
 ?>
