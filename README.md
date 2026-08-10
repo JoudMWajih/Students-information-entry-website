@@ -47,7 +47,16 @@ The website allows the user to enter a student's name and age, save the data int
 
 ## Database Structure
 
-### Database Table Name
 
-```sql
+### Table Name
+
 students
+
+### Table Columns
+
+| Column | Type | Description |
+| --- | --- | --- |
+| id | INT | Primary key and auto increment |
+| name | VARCHAR(100) | Student name |
+| age | INT | Student age |
+| status | TINYINT(1) | Status value, either 0 or 1 |
