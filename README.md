@@ -76,7 +76,85 @@ CREATE TABLE students (
 );
 ```
 
-
 ---
 ## File Description
 
+### index.php
+
+The main webpage of the project.
+
+It contains the form, displays the student records in a table, and connects the page with the database.
+
+---
+
+### in.php
+
+This file handles inserting student data into the database.
+
+It receives the student's name and age, then stores them in the MySQL table.
+
+---
+
+### db.php
+
+This file contains the database connection information.
+
+It connects the PHP files to the MySQL database.
+
+---
+
+### toggle.php
+
+This file updates the status value for each student.
+
+If the status is `0`, it changes it to `1`.
+
+If the status is `1`, it changes it back to `0`.
+
+---
+
+### script.js
+
+This file contains the JavaScript code for the Toggle button.
+
+It sends the selected student ID to `toggle.php` and updates the status value immediately on the webpage.
+
+---
+
+### style.css
+
+This file contains the CSS styling for the webpage.
+
+It styles the form, table, buttons, and page layout.
+
+---
+
+## How the Project Works
+
+1. The user enters the student's name and age.
+2. The user clicks the Submit button.
+3. PHP sends the data to the MySQL database.
+4. The student record is saved in the `students` table.
+5. All records are displayed in a table on the webpage.
+6. Each record has a Toggle button.
+7. When the Toggle button is clicked, JavaScript sends the student ID to `toggle.php`.
+8. PHP checks the current status value.
+9. If the status is `0`, it changes to `1`.
+10. If the status is `1`, it changes to `0`.
+11. The new status value appears immediately on the webpage.
+
+---
+
+## Hosting
+
+The project was hosted using InfinityFree.
+
+### Hosting Steps
+
+1. Create a free account on InfinityFree.
+2. Create a free domain or subdomain.
+3. Create a MySQL database.
+4. Open phpMyAdmin.
+5. Create the `students` table.
+6. Upload all project files into the `htdocs` folder.
+7. Open the website using the InfinityFree domain.
