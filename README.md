@@ -158,3 +158,11 @@ The project was hosted using InfinityFree.
 5. Create the `students` table.
 6. Upload all project files into the `htdocs` folder.
 7. Open the website using the InfinityFree domain.
+
+
+---
+## Demo Video
+
+The video below shows the website in action, including adding student information and using the Toggle button to change the status.
+
+[Watch Demo Video](demo-video.mp4)
