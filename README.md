@@ -75,3 +75,20 @@ CREATE TABLE students (
     status TINYINT(1) DEFAULT 0
 );
 ```
+
+---
+## Project Files
+
+student-information-database/
+│
+├── index.php
+├── in.php
+├── db.php
+├── toggle.php
+├── style.css
+├── script.js
+└── README.md
+
+---
+## File Description
+
